@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+body div,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dl,
+dt,
+em,
+fieldset,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+nav,
+section,
+summary {
+  display: block; }
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+embed,
+object {
+  max-width: 100%; }
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input,
+select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+input,
+select,
+textarea {
+  font: 99% sans-serif; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td,
+td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+button,
+input[type=button],
+input[type=file],
+input[type=submit],
+label {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+html {
+  font-family: '宋体', "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+html, body {
+  height: 100%; }
+
+.page {
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%; }
+
+html[data-dpr='2'] .page {
+  min-width: 320px;
+  max-width: 1280px; }
+
+html[data-dpr='3'] .page {
+  min-width: 320px;
+  max-width: 1920px; }
+
+.page {
+  padding-bottom: 0.53333rem; }
+
+.background-image-filter {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  height: 100%; }
+  .background-image-filter img {
+    height: 100%;
+    margin-left: -50%;
+    -webkit-filter: blur(30px);
+    filter: blur(30px); }
+  .background-image-filter:after {
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+
+.page-main {
+  position: relative;
+  padding-top: 0.4rem; }
+  .page-main .xm-log {
+    height: 0.4rem;
+    display: block;
+    margin: 0 auto; }
+  .page-main .cover-list {
+    padding-top: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 266.66667rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transform: translate(1.93333rem, 0);
+    height: 6.93333rem; }
+    .page-main .cover-list .cover-item {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 0.21333rem;
+      overflow: hidden;
+      margin-right: 0.8rem; }
+      .page-main .cover-list .cover-item img {
+        width: 100%;
+        height: 100%;
+        display: block; }
+      .page-main .cover-list .cover-item.cover-active {
+        width: 6.13333rem;
+        height: 6.13333rem; }
+  .page-main .fm {
+    padding-top: 0.8rem; }
+    .page-main .fm img {
+      width: 100%;
+      display: block; }
+  .page-main .cp-text {
+    padding-top: 0.85333rem;
+    color: #fff;
+    text-align: center; }
+    .page-main .cp-text .text-header {
+      font-size: 18px;
+      line-height: 1; }
+      [data-dpr="2"] .page-main .cp-text .text-header {
+        font-size: 36px; }
+      [data-dpr="3"] .page-main .cp-text .text-header {
+        font-size: 54px; }
+    .page-main .cp-text .text-body {
+      font-size: 12px;
+      padding: 0.50667rem 0.93333rem 0.85333rem; }
+      [data-dpr="2"] .page-main .cp-text .text-body {
+        font-size: 24px; }
+      [data-dpr="3"] .page-main .cp-text .text-body {
+        font-size: 36px; }
+  .page-main .audio-player {
+    padding-left: 0.53333rem;
+    position: relative; }
+    .page-main .audio-player .player-btn {
+      width: 1.2rem;
+      height: 1.2rem;
+      background: url("../images/play.png") no-repeat left top;
+      background-size: contain; }
+    .page-main .audio-player .player-progress {
+      width: 6.93333rem;
+      position: absolute;
+      left: 2.4rem;
+      top: 0.26667rem; }
+      .page-main .audio-player .player-progress .player_seekbar, .page-main .audio-player .player-progress .player_playbar {
+        height: 0.05333rem;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .page-main .audio-player .player-progress .player_seekbar {
+        width: 100%;
+        opacity: 0.3;
+        background: #FFFFFF; }
+      .page-main .audio-player .player-progress .player_playbar {
+        background: #FC5832; }
+        .page-main .audio-player .player-progress .player_playbar .player-point {
+          content: "";
+          position: absolute;
+          top: -0.17333rem;
+          right: -0.17333rem;
+          background: url("../images/progress-point.png") no-repeat left top;
+          background-size: contain;
+          width: 0.4rem;
+          height: 0.4rem; }
+      .page-main .audio-player .player-progress .player_position, .page-main .audio-player .player-progress .player_endPosition {
+        position: absolute;
+        top: 0.4rem;
+        font-size: 12px;
+        color: #FFFFFF; }
+        [data-dpr="2"] .page-main .audio-player .player-progress .player_position, [data-dpr="2"] .page-main .audio-player .player-progress .player_endPosition {
+          font-size: 24px; }
+        [data-dpr="3"] .page-main .audio-player .player-progress .player_position, [data-dpr="3"] .page-main .audio-player .player-progress .player_endPosition {
+          font-size: 36px; }
+      .page-main .audio-player .player-progress .player_position {
+        left: 0; }
+      .page-main .audio-player .player-progress .player_endPosition {
+        right: 0; }
+
+.every-voice-log {
+  background: url("../images/every-voice-logo@2x.png") no-repeat center center;
+  background-size: contain;
+  height: 0.24rem;
+  position: absolute;
+  bottom: 0.32rem;
+  left: 0;
+  right: 0; }
+
+/*限定为屏幕宽度,超出隐藏*/
+.limit-w {
+  width: 10rem;
+  overflow: hidden; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV2ZXJ5LXZvaWNlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FBQ2hCLGdCQUFnQjtBQUNoQjs7RUFFRSxNQUFNO0VBQ04sUUFBUTtFQUNSLG1CQUFtQjtFQUNuQixZQUFZO0VBQ1osYUFBYTtFQUNiO0lBQ0UsYUFBYTtJQUNiLGtCQUFrQjtJQUNsQiwyQkFBbUI7WUFBbkIsbUJBQW1CO0dBQ3BCO0NBQ0Y7QUFDRDtFQUNFLG1CQUFtQjtFQUNuQjs7S0FFRyxxQkFBcUI7S0FDckIsZUFBZTtLQUNmLHNDQUFzQztHQUN4QztFQUNEO0lBQ0UscUJBQWM7SUFBZCxxQkFBYztJQUFkLGNBQWM7SUFDZCxzQkFBc0I7SUFDdEIsMEJBQW9CO1FBQXBCLHVCQUFvQjtZQUFwQixvQkFBb0I7SUFDcEIsNEJBQTRCO0lBQzVCO01BQ0UsMkJBQTJCO01BQzNCLHFCQUFxQjtNQUNyQixzQkFBc0I7TUFDdEIsNEJBQTRCO01BQzVCO1FBQ0UscUJBQXFCO1FBQ3JCLHNCQUFzQjtPQUN2QjtLQUNGO0dBQ0Y7Q0FDRjtBQUNELGdCQUFnQjtBQUNoQjtFQUNFLHFCQUFxQjtFQUNyQixpQkFBaUI7Q0FDbEIiLCJmaWxlIjoiZXZlcnktdm9pY2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCJtaXhpblwiO1xuQGltcG9ydCBcInJlc2V0XCI7XG4vL+mrmOaWr+aooeeziuWkp+WbvlxuLmJhY2tncm91bmQtaW1hZ2UtZmlsdGVye1xuICB0b3A6MDtcbiAgbGVmdDogMDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB6LWluZGV4OiAtMTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBpbWd7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG1hcmdpbi1sZWZ0OiAtNTAlO1xuICAgIGZpbHRlcjogYmx1cigxMHB4KTtcbiAgfVxufVxuLnBhZ2V7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgLy9sb2dcbiAgLnhtLWxvZ3tcbiAgICAgaGVpZ2h0OiBweDJyZW0oMzBweCk7XG4gICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICBtYXJnaW46cHgycmVtKDMwcHgpIGF1dG8gcHgycmVtKDYwcHgpO1xuICB9XG4gIC5jb3Zlci1saXN0e1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgd2lkdGg6IHB4MnJlbSgyMDAwcHgpO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luLWxlZnQ6IHB4MnJlbSgtMjc1cHgpO1xuICAgIC5jb3Zlci1pdGVte1xuICAgICAgbWFyZ2luLXJpZ2h0OiBweDJyZW0oNjBweCk7XG4gICAgICB3aWR0aDogcHgycmVtKDM2MHB4KTtcbiAgICAgIGhlaWdodDogcHgycmVtKDM2MHB4KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IHB4MnJlbSgxNnB4KTtcbiAgICAgICYuY292ZXItYWN0aXZle1xuICAgICAgICB3aWR0aDogcHgycmVtKDQ2MHB4KTtcbiAgICAgICAgaGVpZ2h0OiBweDJyZW0oNDYwcHgpO1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuLyrpmZDlrprkuLrlsY/luZXlrr3luqYs6LaF5Ye66ZqQ6JePKi9cbi5saW1pdC13e1xuICB3aWR0aDogcHgycmVtKDc1MHB4KTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn0iXX0= */
+
+/*# sourceMappingURL=every-voice.css.map */

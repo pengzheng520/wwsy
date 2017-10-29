@@ -1,0 +1,45 @@
+@function px2rem($px, $base-font-size: 75px) {
+     @if (unitless($px)){
+        @return px2rem($px + 0px);
+    }
+    @else if (unit($px) == rem) {
+         @return $px;
+    }
+    @return ($px / $base-font-size) * 1rem;
+}
+@mixin font-dpr($font-size) {
+    font-size: $font-size/2;
+
+    [data-dpr="2"] & {
+        font-size: $font-size;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 1.5;
+    }
+}
+@mixin image-set($bg, $bg2x) {
+    background-image: image-set(url($bg) 1x, url($bg2x) 2x);
+}
+@mixin clearFix {
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    *height: 1%;
+}
+@mixin text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}

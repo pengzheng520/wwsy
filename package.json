@@ -1,0 +1,23 @@
+{
+	"name": "every-voice-c",
+	"version": "1.0.0",
+	"main": "base.js",
+	"author": {
+		"name": "jim.zheng",
+		"charge": "html,js,css"
+	},
+	"description": "万物有声C端页面",
+	"combines": {
+        "js/adaptive.min.js":[
+          "js/adaptive.js"
+        ]
+	},
+	"output": [
+		"audio/**",
+        "images/**",
+        "js/**",
+        "sass/**",
+        "views/**",
+		"libs/**"
+	]
+}

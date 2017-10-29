@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>万物有声</title>
+    <meta name="keywords" content="喜马拉雅FM">
+    <meta name="description" content="喜马拉雅FM">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <script src="/js/adaptive.js"></script>
+    <link rel="stylesheet" href="/sass/every-voice.css">
+</head>
+<body>
+<div class="page">
+    <!--高斯模糊大图-->
+    <div class="limit-w background-image-filter">
+        <img src="/images/cover-1.png"/>
+    </div>
+    <!--主页面元素-->
+    <div class="page-main">
+        <!--xm-logo-->
+        <img class="xm-log" src="/images/xm-logo.png"/>
+        <!--图片对象-->
+        <div class="limit-w">
+            <div class="cover-list" id="coverList">
+                <div class="cover-item cover-active">
+                    <img src="/images/cover-1.png">
+                </div>
+                <div class="cover-item">
+                    <img src="/images/cover-2.png">
+                </div>
+                <div class="cover-item">
+                    <img src="/images/cover-3.png">
+                </div>
+            </div>
+        </div>
+        <!--调屏-->
+        <div   class="fm" id="fm">
+            <img src="/images/fM.png" />
+        </div>
+        <!--文案-->
+        <div class="cp-text">
+            <div class="text-header">B6 智能降噪耳机产品电台</div>
+            <div class="text-body">B6 蓝牙智能降噪耳机，打造耳朵私想的头等舱空间。那些关于耳机你不知道的故事，来听听产品设计师怎么说</div>
+        </div>
+        <!--播放器-->
+        <div class="audio-player">
+            <div class="player-btn"></div>
+            <div class="player-progress">
+                <div class="player_seekbar"></div>
+                <div class="player_playbar" style="width: 0%">
+                    <div class="player-point"></div>
+                </div>
+                <div class="player_position">2:01</div>
+                <div class="player_endPosition">12:56</div>
+            </div>
+        </div>
+    </div>
+    <!--万物有声logo-->
+    <div class="every-voice-log"></div>
+</div>
+<script src="//s1.xmcdn.com/lib/common/last/jquery/2.1.4/jquery.js" type="text/javascript"></script>
+<script src="//s1.xmcdn.com/lib/xm/last/config.product.js?v=20170822151524" type="text/javascript"></script>
+<script src="//s1.xmcdn.com/lib/player/last/all.js?v=20170822151524" type="text/javascript"></script>
+<script src="//cdn.bootcss.com/move.js/0.5.0/move.min.js"></script>
+<script src="/js/every-voice.js"></script>
+</body>
+</html>
